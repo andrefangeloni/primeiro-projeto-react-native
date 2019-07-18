@@ -1,10 +1,13 @@
-import React, { Component } from "react";
-import { View } from "react-native";
+import React from "react";
+import { StatusBar } from "react-native";
 import "./config/ReactotronConfig";
 import Routes from "./routes";
 
-export default class App extends Component {
-  render() {
-    return <Routes />;
-  }
+export default function App() {
+  return (
+    <>
+      <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+      <Routes />
+    </>
+  );
 }
