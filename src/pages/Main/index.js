@@ -65,12 +65,6 @@ export default class Main extends Component {
       avatar: response.data.avatar_url
     };
 
-    handleNavigate = user => {
-      const { navigation } = this.props;
-
-      navigation.navigate("User", { user });
-    };
-
     this.setState({
       users: [...users, data],
       newUser: "",
@@ -78,6 +72,12 @@ export default class Main extends Component {
     });
 
     Keyboard.dismiss();
+  };
+
+  handleNavigate = user => {
+    const { navigation } = this.props;
+
+    navigation.navigate("User", { user });
   };
 
   render() {
